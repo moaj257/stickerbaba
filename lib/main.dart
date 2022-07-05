@@ -59,7 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
       selectedIndex: _selectedPage,
       onTabChange: (int index) {
-        print(_selectedPage);
         setState(() {
           _selectedPage = index;
         });
