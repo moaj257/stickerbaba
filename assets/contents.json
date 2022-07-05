@@ -1,0 +1,744 @@
+{
+  "sticker_packs": [
+    {
+      "identifier": "arch",
+      "name": "Best Friends",
+      "publisher": "3 Dots",
+      "tray_image_file": "arch.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_archbff_bro.webp",
+          "emojis": ["☕","🙂"]
+        },
+        {
+          "image_file": "002_archbff_babe.webp",
+          "emojis": ["😄","😀"]
+        },
+        {
+          "image_file": "003_archbff_bff.webp",
+          "emojis": ["😆","😂"]
+        },
+        {
+          "image_file": "004_archbff_brofist.webp",
+          "emojis": ["😩","😰"]
+        },
+        {
+          "image_file": "005_archbff_awwww.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "006_archbff_gotcha.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "007_archbff_rockon.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "008_archbff_happyfriendshipday.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "009_archbff_teasing.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "010_archbff_sorry.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "011_archbff_yaayiee.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "012_archbff_friendsforever.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "baby",
+      "name": "Baby",
+      "publisher": "3 Dots",
+      "tray_image_file": "baby.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_baby_morning.webp",
+          "emojis": ["☕","🙂"]
+        },
+        {
+          "image_file": "002_baby_crying.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "003_baby_shhh.webp",
+          "emojis": ["😆","😂"]
+        },
+        {
+          "image_file": "004_baby_hmmm.webp",
+          "emojis": ["😩","😰"]
+        },
+        {
+          "image_file": "005_baby_hahaha.webp",
+          "emojis": ["😆","😂"]
+        },
+        {
+          "image_file": "006_baby_dontgo.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "007_baby_please.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "008_baby_goodnight.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "009_baby_itsagirl.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "010_baby_itsaboy.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "011_baby_bornsmart.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "012_baby_angry.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "013_baby_notwell.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "014_baby_love.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "015_baby_haww.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "016_baby_yuck.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "017_baby_iamsocool.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "018_baby_selfie.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "boo",
+      "name": "Boo",
+      "publisher": "3 Dots",
+      "tray_image_file": "boo.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "003_boo_hugsandkisses.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "004_boo_iloveyou.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_boo_please.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "015_boo_hi.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "017_boo_hihihi.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "019_boo_ihateyou.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "025_boo_thankyou.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "026_boo_byebye.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "031_boo_wassupyo.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "033_boo_bigsmile.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "043_boo_no.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "044_boo_movietime.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "056_boo_thinking.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "057_boo_couplesleeping.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "cats",
+      "name": "Cat Emotions",
+      "publisher": "3 Dots",
+      "tray_image_file": "cat.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "002_cats_boo.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "003_cats_drinkingmilk.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "012_cats_muah.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "017_cats_sorry.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "034_cats_keelyou.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "038_cats_sleepinglaptop.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "042_cats_yawn.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "044_cats_morning.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "057_cats_goodnight.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "collegeromance",
+      "name": "Class Room Romance",
+      "publisher": "3 Dots",
+      "tray_image_file": "collegeromance.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_collegeromance_takingselfie.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "002_collegeromance_headphones.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "003_collegeromance_undertable.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "004_collegeromance_classroom.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "005_collegeromance_gazing.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_collegeromance_feeding.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "007_collegeromance_hiddingbybook.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "008_collegeromance_mobilephone.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "009_collegeromance_bikeride.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "010_collegeromance_teasing.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "011_collegeromance_hugging.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "012_collegeromance_holdingarm.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "013_collegeromance_girlwritting.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "014_collegeromance_blowingkiss.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "015_collegeromance_waisthugging.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "016_collegeromance_holdinghands.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "engexpression",
+      "name": "English Expressions",
+      "publisher": "3 Dots",
+      "tray_image_file": "expression.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_exe_imbusy.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "002_exe_imtired.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "003_exe_stuckintraffic.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "004_exe_headache.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "005_exe_needtostudy.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_exe_notinmood.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "007_exe_idk.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "008_exe_momsaidno.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "009_exe_workathome.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "010_exe_inclass.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "011_exe_nobalance.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "012_exe_nomoney.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "weather",
+      "name": "Weathers",
+      "publisher": "3 Dots",
+      "tray_image_file": "weather.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_we_sunnynice.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "002_we_summercoming.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "003_we_lovesummers.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "004_we_hatesummers.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "005_we_itsraining.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_we_loverains.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "007_we_haterains.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "008_we_rainrainaway.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "009_we_storm.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "010_we_winteriscoming.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "011_we_lovewinters.webp",
+          "emojis": ["😍","💑"]
+        },
+        {
+          "image_file": "012_we_hatewinters.webp",
+          "emojis": ["😍","💑"]
+        }
+      ]
+    },
+    {
+      "identifier": "breakup",
+      "name": "Heart Broken",
+      "publisher": "3 Dots",
+      "tray_image_file": "breakup.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_breakup_webrokeup.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "002_breakup_lovehurts.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "003_breakup_sadgirl.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "004_breakup_youdontlovemeanymore.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "005_breakup_neverunderstand.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "006_breakup_whatswrong.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "007_breakup_needspace.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "008_breakup_youvechanged.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "009_breakup_gotohell.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "010_breakup_myfault.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "011_breakup_liar.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "012_breakup_hateyou.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "013_breakup_sadguy.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "014_breakup_donttakemeforgranted.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "015_breakup_youbewithyourfriends.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "016_breakup_whatsurproblem.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "017_breakup_leavemealone.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "018_breakup_guycrying.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "019_breakup_upset.webp",
+          "emojis": ["😭","💧"]
+        },
+        {
+          "image_file": "020_breakup_whyarewefighting.webp",
+          "emojis": ["😭","💧"]
+        }
+      ]
+    },
+    {
+      "identifier": "faceexpression",
+      "name": "Face Expressions",
+      "publisher": "3 Dots",
+      "tray_image_file": "face.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_gn.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "002_lol.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "009_gm.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "015_cakeslice.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "037_coolio.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "066_osum.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "093_byee.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "094_sorry.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "095_thanks.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "105_hmmm.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "106_huh.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "107_nothing.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "109_goodluck.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "113_whereareyou.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "115_attitude.webp",
+          "emojis": ["😍","♥"]
+        }
+      ]
+    },
+    {
+      "identifier": "fairytale",
+      "name": "Fairytale Love",
+      "publisher": "3 Dots",
+      "tray_image_file": "fairytale.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "001_fairytale_umbrella.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "005_fairytale_snowfall.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_fairytale_bonfire.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "009_fairytale_stars.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "013_fairytale_carpetride.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "015_fairytale_liftingup.webp",
+          "emojis": ["😍","♥"]
+        }
+      ]
+    },
+    {
+      "identifier": "humanoid",
+      "name": "Humanoid Expression",
+      "publisher": "3 Dots",
+      "tray_image_file": "humanoid.png",
+      "publisher_email":"threedots75@gmail.com",
+      "publisher_website": "http://3dots.online/",
+      "privacy_policy_website": "",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "002_love2.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "003_teasing.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "004_rofl.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "006_angry.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "012_Partying.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "015_Singing2.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "016_SleepingAtBreakfast.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "019_AllTheBest.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "022_Cheers.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "025_ItsYourFault.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "026_ListeningtoMusic.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "036_Heart.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "046_smile.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "053_todo.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "057_Gangman.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "069_hi.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "071_yes.webp",
+          "emojis": ["😍","♥"]
+        },
+        {
+          "image_file": "072_no.webp",
+          "emojis": ["😍","♥"]
+        }
+      ]
+    }
+  ]
+}
