@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -17,11 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sticker Baba',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        colorScheme: const ColorScheme.dark(),
+        colorScheme: const ColorScheme.light(),
       ),
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
     );
   }
@@ -36,43 +39,62 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedPage = 0;
   final _pages = [
-    Home(),
-    Trending(),
-    Favourites(),
-    Settings()
+    {'name': 'Explore', 'component': const Home()},
+    {'name': 'Trending', 'component': Trending()},
+    {'name': 'Favourites', 'component': Favourites()},
+    {'name': 'Settings', 'component': Settings()}
   ];
 
   @override
   Widget build(BuildContext context) {
     GNav bottomNavigation = GNav(
-      gap: 8,
-      backgroundColor: Colors.white,
-      activeColor: Colors.black,
-      color: Colors.black,
-      tabBackgroundColor: Colors.black12,
-      padding: const EdgeInsets.all(12.0),
-      tabs: const [
-        GButton(icon: EvaIcons.homeOutline, text: 'Home'),
-        GButton(icon: EvaIcons.trendingUpOutline, text: 'Trending'),
-        GButton(icon: EvaIcons.heartOutline, text: 'Likes'),
-        GButton(icon: EvaIcons.settings2Outline, text: 'Settings'),
-      ],
-      selectedIndex: _selectedPage,
-      onTabChange: (int index) {
-        setState(() {
-          _selectedPage = index;
-        });
-      }
-    ); 
-    return Scaffold(
-      body: _pages.elementAt(_selectedPage),
-      bottomNavigationBar: Container(
+        gap: 8,
+        backgroundColor: Colors.black,
+        activeColor: Colors.white,
         color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 16.0),
-          child: bottomNavigation,
+        tabBackgroundColor: Colors.white24,
+        padding: const EdgeInsets.all(12.0),
+        tabs: [
+          GButton(
+              icon: EvaIcons.homeOutline, text: _pages[0]['name'] as String),
+          GButton(
+              icon: EvaIcons.trendingUpOutline,
+              text: _pages[1]['name'] as String),
+          GButton(
+              icon: EvaIcons.heartOutline, text: _pages[2]['name'] as String),
+          GButton(
+              icon: EvaIcons.settings2Outline,
+              text: _pages[3]['name'] as String),
+        ],
+        selectedIndex: _selectedPage,
+        onTabChange: (int index) {
+          setState(() {
+            _selectedPage = index;
+          });
+          // print(json.decode(_pages.elementAt(_selectedPage)));
+        });
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            _pages[_selectedPage]['name'] as String,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            IconButton(
+                onPressed: () {}, icon: const Icon(EvaIcons.searchOutline))
+          ],
+          elevation: 0,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
         ),
-      )
-    );
+        body: _pages[_selectedPage]['component'] as Widget,
+        bottomNavigationBar: Container(
+          color: Colors.black,
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+            child: bottomNavigation,
+          ),
+        ));
   }
 }
