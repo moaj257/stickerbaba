@@ -82,60 +82,11 @@ class _HomeState extends State<Home> {
             decoration: const BoxDecoration(color: Colors.white),
             child: Column(
               children: [
-                Card(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 20.0, horizontal: 25.0),
-                    width: _screenWidth - 10,
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(15.0))),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image(
-                              height: (_stickerSize + 48.0),
-                              width: (_stickerSize + 48.0),
-                              image: NetworkImage(rawUrl +
-                                  '/' +
-                                  snapshot.data[_featuredIndex].identifier +
-                                  '/' +
-                                  snapshot.data[_featuredIndex].trayImageFile),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          snapshot.data[_featuredIndex].name,
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 24.0,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.white),
-                        ),
-                        Text(
-                          'Pick of the day',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.0,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
                 Expanded(
                   child: ListView.builder(
                       itemCount: snapshot.data.length,
                       itemBuilder: (context, index) {
-                        return Container(
+                        Container _content = Container(
                           padding: const EdgeInsets.symmetric(
                               vertical: 15.0, horizontal: 10.0),
                           child: Column(
@@ -233,6 +184,63 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         );
+
+                        Card _headerCard = Card(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 20.0, horizontal: 25.0),
+                            width: _screenWidth - 10,
+                            decoration: BoxDecoration(
+                                color: Colors.deepPurple.shade300,
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(15.0))),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      height: (_stickerSize + 48.0),
+                                      width: (_stickerSize + 48.0),
+                                      image: NetworkImage(rawUrl +
+                                          '/' +
+                                          snapshot
+                                              .data[_featuredIndex].identifier +
+                                          '/' +
+                                          snapshot.data[_featuredIndex]
+                                              .trayImageFile),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 5.0),
+                                Text(
+                                  snapshot.data[_featuredIndex].name,
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 24.0,
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.white),
+                                ),
+                                Text(
+                                  'Pick of the day',
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18.0,
+                                      fontStyle: FontStyle.normal,
+                                      color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+
+                        Column _onecontent =
+                            Column(children: [_headerCard, _content]);
+
+                        return index == 0 ? _onecontent : _content;
                       }),
                 ),
               ],
