@@ -43,9 +43,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    int _count = 6;
-    double _screenWidth = MediaQuery.of(context).size.width - 2.0;
-    double _stickerSize = ((_screenWidth - (10 * _count)) / _count);
+    double _screenWidth = MediaQuery.of(context).size.width;
     return FutureBuilder(
       future: getData(),
       builder: (context, AsyncSnapshot snapshot) {
@@ -75,176 +73,27 @@ class _HomeState extends State<Home> {
           );
         } else if (snapshot.hasData &&
             snapshot.connectionState == ConnectionState.done) {
-          Random random = new Random();
-          int _featuredIndex = random.nextInt(snapshot.data.length);
-          // print(snapshot.hasData ? snapshot.data.length : 0);
-          return Container(
-            decoration: const BoxDecoration(color: Colors.white),
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView.builder(
-                      itemCount: snapshot.data.length,
-                      itemBuilder: (context, index) {
-                        Container _content = Container(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 15.0, horizontal: 10.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(4.0),
-                                    height: (_stickerSize + 32.0),
-                                    width: (_stickerSize + 32.0),
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey.shade200,
-                                        border: Border.all(
-                                            color: Colors.grey.shade300,
-                                            width: 1.0),
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(15.0))),
-                                    margin: const EdgeInsets.only(right: 8.0),
-                                    child: Image(
-                                        image: NetworkImage(rawUrl +
-                                            '/' +
-                                            snapshot.data[index].identifier +
-                                            '/' +
-                                            snapshot
-                                                .data[index].trayImageFile)),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(snapshot.data[index].name,
-                                          style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w800,
-                                              fontSize: 24.0)),
-                                      Text(
-                                          snapshot.data[index].stickers.length
-                                                  .toString() +
-                                              ' stickers',
-                                          style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18.0,
-                                              fontStyle: FontStyle.normal,
-                                              color: Colors.grey.shade400)),
-                                      Text(snapshot.data[index].publisher,
-                                          style: GoogleFonts.poppins(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 14.0,
-                                              fontStyle: FontStyle.italic,
-                                              color: Colors.grey.shade400))
-                                    ],
-                                  )
-                                ],
-                              ),
-                              const SizedBox(height: 10.0),
-                              Row(
-                                children: [
-                                  ...snapshot.data[index].stickers
-                                      .take(_count)
-                                      .map((v) => Padding(
-                                            padding: EdgeInsets.only(
-                                                right: snapshot.data[index]
-                                                            .stickers
-                                                            .indexOf(v) ==
-                                                        _count - 1
-                                                    ? 0.0
-                                                    : 8.0),
-                                            child: Container(
-                                              height: _stickerSize,
-                                              width: _stickerSize,
-                                              decoration: BoxDecoration(
-                                                  color: Colors.grey.shade200,
-                                                  border: Border.all(
-                                                      color:
-                                                          Colors.grey.shade300,
-                                                      width: 1.0),
-                                                  borderRadius:
-                                                      const BorderRadius.all(
-                                                          Radius.circular(
-                                                              15.0))),
-                                              child: Image(
-                                                  image: NetworkImage(rawUrl +
-                                                      '/' +
-                                                      snapshot.data[index]
-                                                          .identifier +
-                                                      '/' +
-                                                      v.imageFile)),
-                                            ),
-                                          )),
-                                ],
-                              ),
-                            ],
-                          ),
-                        );
-
-                        Card _headerCard = Card(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 20.0, horizontal: 25.0),
-                            width: _screenWidth - 10,
-                            decoration: BoxDecoration(
-                                color: Colors.deepPurple.shade300,
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(15.0))),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      height: (_stickerSize + 48.0),
-                                      width: (_stickerSize + 48.0),
-                                      image: NetworkImage(rawUrl +
-                                          '/' +
-                                          snapshot
-                                              .data[_featuredIndex].identifier +
-                                          '/' +
-                                          snapshot.data[_featuredIndex]
-                                              .trayImageFile),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 5.0),
-                                Text(
-                                  snapshot.data[_featuredIndex].name,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 24.0,
-                                      fontStyle: FontStyle.normal,
-                                      color: Colors.white),
-                                ),
-                                Text(
-                                  'Pick of the day',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18.0,
-                                      fontStyle: FontStyle.normal,
-                                      color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-
-                        Column _onecontent =
-                            Column(children: [_headerCard, _content]);
-
-                        return index == 0 ? _onecontent : _content;
-                      }),
-                ),
-              ],
-            ),
+          // Random random = new Random();
+          int _colsPerRow = 3;
+          return Column(
+            children: [
+              GridView.count(
+                  primary: false,
+                  padding: const EdgeInsets.all(10),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: _colsPerRow,
+                  children: <Widget>[
+                    ...snapshot.data.map((_v) => Container(
+                          padding: const EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade300,
+                              borderRadius: const BorderRadius.all(
+                                  Radius.circular(15.0))),
+                          child: Text(_v.name),
+                        ))
+                  ]),
+            ],
           );
         }
         return const Text('to be done');
