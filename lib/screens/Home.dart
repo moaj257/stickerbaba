@@ -9,6 +9,7 @@ import 'dart:core';
 import 'dart:convert';
 
 import 'package:stickerbaba/models/StickerPack.dart';
+import 'package:stickerbaba/utils/Functions.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -75,25 +76,70 @@ class _HomeState extends State<Home> {
             snapshot.connectionState == ConnectionState.done) {
           // Random random = new Random();
           int _colsPerRow = 3;
-          return Column(
-            children: [
-              GridView.count(
-                  primary: false,
-                  padding: const EdgeInsets.all(10),
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: _colsPerRow,
-                  children: <Widget>[
-                    ...snapshot.data.map((_v) => Container(
+          double _crossExtent = ((_screenWidth - 20) / _colsPerRow);
+          double _crossExtentFeatured = ((_screenWidth - 20) / 2);
+          // Functions _functions = Functions();
+          // List _items = _functions.oneToMulti(snapshot.data, _colsPerRow);
+          return Container(
+            decoration: const BoxDecoration(color: Colors.white),
+            child: CustomScrollView(
+              slivers: [
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  sliver: SliverGrid(
+                    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: _crossExtentFeatured,
+                      mainAxisSpacing: 10.0,
+                      crossAxisSpacing: 10.0,
+                      childAspectRatio: 0.75,
+                    ),
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        return Container(
                           padding: const EdgeInsets.all(5.0),
                           decoration: BoxDecoration(
                               color: Colors.grey.shade300,
                               borderRadius: const BorderRadius.all(
                                   Radius.circular(15.0))),
-                          child: Text(_v.name),
-                        ))
-                  ]),
-            ],
+                          child: Text(snapshot.data[index].name),
+                        );
+                      },
+                      childCount: snapshot.data.take(2).length,
+                    ),
+                  ),
+                ),
+                const SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: 10.0,
+                  ),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, right: 10.0, bottom: 10.0),
+                  sliver: SliverGrid(
+                    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: _crossExtent,
+                      mainAxisSpacing: 10.0,
+                      crossAxisSpacing: 10.0,
+                      childAspectRatio: 0.75,
+                    ),
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        return Container(
+                          padding: const EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade300,
+                              borderRadius: const BorderRadius.all(
+                                  Radius.circular(15.0))),
+                          child: Text(snapshot.data[index].name),
+                        );
+                      },
+                      childCount: snapshot.data.length,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           );
         }
         return const Text('to be done');
