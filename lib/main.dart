@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import './screens/Home.dart';
 import './screens/Trending.dart';
@@ -39,7 +40,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedPage = 0;
   final _pages = [
-    {'name': 'Explore', 'component': const Home()},
+    {'name': 'Featured', 'component': const Home()},
     {'name': 'Trending', 'component': Trending()},
     {'name': 'Favourites', 'component': Favourites()},
     {'name': 'Settings', 'component': Settings()}
@@ -56,15 +57,29 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(12.0),
         tabs: [
           GButton(
-              icon: EvaIcons.homeOutline, text: _pages[0]['name'] as String),
+            icon: EvaIcons.homeOutline,
+            text: _pages[0]['name'] as String,
+            textStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.w600, color: Colors.white),
+          ),
           GButton(
-              icon: EvaIcons.trendingUpOutline,
-              text: _pages[1]['name'] as String),
+            icon: EvaIcons.trendingUpOutline,
+            text: _pages[1]['name'] as String,
+            textStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.w600, color: Colors.white),
+          ),
           GButton(
-              icon: EvaIcons.heartOutline, text: _pages[2]['name'] as String),
+            icon: EvaIcons.heartOutline,
+            text: _pages[2]['name'] as String,
+            textStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.w600, color: Colors.white),
+          ),
           GButton(
-              icon: EvaIcons.settings2Outline,
-              text: _pages[3]['name'] as String),
+            icon: EvaIcons.settings2Outline,
+            text: _pages[3]['name'] as String,
+            textStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.w600, color: Colors.white),
+          ),
         ],
         selectedIndex: _selectedPage,
         onTabChange: (int index) {
@@ -74,19 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // print(json.decode(_pages.elementAt(_selectedPage)));
         });
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            _pages[_selectedPage]['name'] as String,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          actions: [
-            IconButton(
-                onPressed: () {}, icon: const Icon(EvaIcons.searchOutline))
-          ],
-          elevation: 0,
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-        ),
+        appBar: MyAppBar(title: _pages[_selectedPage]['name'] as String),
         body: _pages[_selectedPage]['component'] as Widget,
         bottomNavigationBar: Container(
           color: Colors.black,
@@ -96,5 +99,52 @@ class _MyHomePageState extends State<MyHomePage> {
             child: bottomNavigation,
           ),
         ));
+  }
+}
+
+class MyAppBar extends StatelessWidget with PreferredSizeWidget {
+  final double appBarHeight = 70.0;
+  final String title;
+
+  const MyAppBar({Key? key, required this.title}) : super(key: key);
+
+  @override
+  get preferredSize => Size.fromHeight(appBarHeight);
+
+  @override
+  Widget build(BuildContext context) {
+    double _screenWidth = MediaQuery.of(context).size.width;
+    double _size = _screenWidth / 2;
+    return Container(
+        clipBehavior: Clip.hardEdge,
+        width: _screenWidth,
+        padding: const EdgeInsets.only(left: 20.0),
+        decoration: const BoxDecoration(
+            color: Color(0xFF605174),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(15.0),
+                bottomRight: Radius.circular(15.0))),
+        child: Stack(children: [
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  title,
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 24.0,
+                      color: Colors.white),
+                )
+              ]),
+          Positioned(
+              right: -(_size / 3),
+              bottom: -(_size / 5),
+              child: Container(
+                  width: _size,
+                  height: _size,
+                  decoration: const BoxDecoration(
+                      color: Color(0xFF665878), shape: BoxShape.circle)))
+        ]));
   }
 }

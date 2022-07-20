@@ -9,7 +9,7 @@ import 'dart:core';
 import 'dart:convert';
 
 import 'package:stickerbaba/models/StickerPack.dart';
-import 'package:stickerbaba/utils/Functions.dart';
+// import 'package:stickerbaba/utils/Functions.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -76,31 +76,36 @@ class _HomeState extends State<Home> {
             snapshot.connectionState == ConnectionState.done) {
           // Random random = new Random();
           int _colsPerRow = 3;
-          double _crossExtent = ((_screenWidth - 20) / _colsPerRow);
-          double _crossExtentFeatured = ((_screenWidth - 20) / 2);
+          double _crossExtent = ((_screenWidth - 30) / _colsPerRow);
+          double _crossExtentFeatured = ((_screenWidth - 30) / 2);
           // Functions _functions = Functions();
           // List _items = _functions.oneToMulti(snapshot.data, _colsPerRow);
           return Container(
             decoration: const BoxDecoration(color: Colors.white),
             child: CustomScrollView(
               slivers: [
+                const SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: 15.0,
+                  ),
+                ),
                 SliverPadding(
-                  padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   sliver: SliverGrid(
                     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: _crossExtentFeatured,
-                      mainAxisSpacing: 10.0,
-                      crossAxisSpacing: 10.0,
-                      childAspectRatio: 0.75,
+                      mainAxisSpacing: 15.0,
+                      crossAxisSpacing: 15.0,
+                      childAspectRatio: 0.8,
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
                         return Container(
                           padding: const EdgeInsets.all(5.0),
-                          decoration: BoxDecoration(
-                              color: Colors.grey.shade300,
-                              borderRadius: const BorderRadius.all(
-                                  Radius.circular(15.0))),
+                          decoration: const BoxDecoration(
+                              color: Color(0xFFddd9d8),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
                           child: Text(snapshot.data[index].name),
                         );
                       },
@@ -108,29 +113,37 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 10.0,
+                SliverPadding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0, vertical: 15.0),
+                  sliver: SliverToBoxAdapter(
+                    child: Row(
+                      children: [
+                        Text('Sricker Packs',
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w600, fontSize: 20.0)),
+                      ],
+                    ),
                   ),
                 ),
                 SliverPadding(
                   padding: const EdgeInsets.only(
-                      left: 10.0, right: 10.0, bottom: 10.0),
+                      left: 15.0, right: 15.0, bottom: 15.0),
                   sliver: SliverGrid(
                     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: _crossExtent,
-                      mainAxisSpacing: 10.0,
-                      crossAxisSpacing: 10.0,
-                      childAspectRatio: 0.75,
+                      mainAxisSpacing: 15.0,
+                      crossAxisSpacing: 15.0,
+                      childAspectRatio: 1,
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
                         return Container(
                           padding: const EdgeInsets.all(5.0),
-                          decoration: BoxDecoration(
-                              color: Colors.grey.shade300,
-                              borderRadius: const BorderRadius.all(
-                                  Radius.circular(15.0))),
+                          decoration: const BoxDecoration(
+                              color: Color(0xFFddd9d8),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
                           child: Text(snapshot.data[index].name),
                         );
                       },
