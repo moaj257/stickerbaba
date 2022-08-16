@@ -64,7 +64,7 @@
       "identifier": "baby",
       "name": "Baby",
       "publisher": "3 Dots",
-      "tray_image_file": "baby.png",
+      "tray_image_file": "https://raw.githubusercontent.com/moaj257/stickerbaba/master/assets/baby/baby.png",
       "publisher_email":"threedots75@gmail.com",
       "publisher_website": "http://3dots.online/",
       "privacy_policy_website": "",
